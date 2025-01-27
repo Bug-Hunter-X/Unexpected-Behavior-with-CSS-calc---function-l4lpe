@@ -1,0 +1,19 @@
+/* Correct usage of calc() */
+.container {
+  width: calc(100% - 2 * 20px); /* Correct use of parentheses and multiplication */
+  padding: calc(10px + 2em); /* Combining different units correctly */
+  height: calc(50% + 100px); /* combining % and px correctly*/
+}
+
+/* Incorrect usage of calc(), corrected with comments */
+.container-incorrect {
+  /* Incorrect: Missing parentheses around the subtraction */
+  /* width: 100% - 20px; */
+  width: calc(100% - 20px); /* Corrected: Added parentheses */
+  /* Incorrect: Combining % and px without proper parentheses */
+  /* height: 50% + 100px; */
+  height: calc(50% + 100px); /* Corrected: Added parentheses */
+  /* Incorrect nesting of calc() - this can also lead to parsing errors.*/
+  /* padding: calc(calc(10px + 10px) + 20px); */
+  padding: calc(10px + 10px + 20px); /* Corrected */
+}
